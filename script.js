@@ -18,6 +18,21 @@ img4.setAttribute("src", data.results[3].background_image)
 var img5 = document.createElement("img")
 img5.setAttribute("src", data.results[4].background_image)
 
+var img6 = document.createElement("img")
+img6.setAttribute("src", data.results[5].background_image)
+
+var img7 = document.createElement("img")
+img7.setAttribute("src", data.results[6].background_image)
+
+var img8 = document.createElement("img")
+img8.setAttribute("src", data.results[7].background_image)
+
+var img9 = document.createElement("img")
+img9.setAttribute("src", data.results[8].background_image)
+
+var img10 = document.createElement("img")
+img10.setAttribute("src", data.results[9].background_image)
+
 // for (i = 0; i < data.results.length; i++){
 //     var carouselItem = $("<a>")
 //     carouselItem.addClass("carousel-item")
@@ -30,6 +45,11 @@ document.querySelector(".item2").append(img2)
 document.querySelector(".item3").append(img3)
 document.querySelector(".item4").append(img4)
 document.querySelector(".item5").append(img5)
+document.querySelector(".item6").append(img6)
+document.querySelector(".item7").append(img7)
+document.querySelector(".item8").append(img8)
+document.querySelector(".item9").append(img9)
+document.querySelector(".item10").append(img10)
     })
 	.catch(err => console.error('error:' + err));
 
