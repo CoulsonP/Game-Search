@@ -3,6 +3,7 @@ const url = 'https://api.rawg.io/api/games?key=66a5bc708a104e548eceb91211ed4232&
 fetch(url)
 	.then(res => res.json())
 	.then(data => {console.log(data)
+
 var img1 = document.createElement("img")
 img1.setAttribute("src", data.results[0].background_image)
 
@@ -21,17 +22,6 @@ img5.setAttribute("src", data.results[4].background_image)
 var img6 = document.createElement("img")
 img6.setAttribute("src", data.results[5].background_image)
 
-var img7 = document.createElement("img")
-img7.setAttribute("src", data.results[6].background_image)
-
-var img8 = document.createElement("img")
-img8.setAttribute("src", data.results[7].background_image)
-
-var img9 = document.createElement("img")
-img9.setAttribute("src", data.results[8].background_image)
-
-var img10 = document.createElement("img")
-img10.setAttribute("src", data.results[9].background_image)
 
 // for (i = 0; i < data.results.length; i++){
 //     var carouselItem = $("<a>")
