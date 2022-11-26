@@ -4,6 +4,7 @@ const url = 'https://api.rawg.io/api/games?key=66a5bc708a104e548eceb91211ed4232&
 
 
 fetch(url)
+
 	.then(res => res.json())
 	.then(data => {console.log(data)
 
@@ -84,3 +85,4 @@ function holder(power){
     console.log("Doing OKAY! Program still works, use duct tape if needed.")
   }
 }
+
