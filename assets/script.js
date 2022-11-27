@@ -40,12 +40,6 @@ document.querySelector(".item1").append(img1)
 document.querySelector(".item2").append(img2)
 document.querySelector(".item3").append(img3)
 document.querySelector(".item4").append(img4)
-document.querySelector(".item5").append(img5)
-document.querySelector(".item6").append(img6)
-document.querySelector(".item7").append(img7)
-document.querySelector(".item8").append(img8)
-document.querySelector(".item9").append(img9)
-document.querySelector(".item10").append(img10)
     })
 	.catch(err => console.error('error:' + err));
 
@@ -72,15 +66,13 @@ document.querySelector(".item10").append(img10)
 
 //  Create 20 blocks for a working page #Saishin
 function holder(power){
-  for (var i = 0; i < 20; i++){
-    let list = []
+  for (var i = 4; i < 20; i++){
     let holder = $("#holder")
     holder.append(`<div id="case${i}">key</div>`)
-    holder.append(`<div id="info${i}">key</div>`)
+    holder.append(`<div id="info${i}"></div>`)
     let gameCase = $(`#case${i}`)
-    let caseInfo = $(`#info${i}`)
     let caseImage = power.results[i].background_image
-    gameCase.html(`<img src=${caseImage} alt="game image" width=200 height=230 >`)
+    gameCase.html(`<img src=${caseImage} alt="game image" width=200>`)
     // need [game_name, game_info, rating, most current comment in reddit, sub_reddit link in botton]
     console.log("Doing OKAY! Program still works, use duct tape if needed.")
   }
