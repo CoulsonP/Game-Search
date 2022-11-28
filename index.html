@@ -18,6 +18,9 @@
   <header>
     <h2 class="title">C.A.T. GAMES</h2>
   </header>
+  <div>
+    <a class="modal-trigger" href="#gameCase-modal">Game Modal</a>
+  </div>
   <main>
 
     <div class="carousel">
@@ -28,7 +31,40 @@
         <a class="carousel-item item4" href=""></a>
     </div>
 
-    <div></div>
+<div id="gameCase-modal" class="modal">
+<!-- Modal Structure -->
+<!-- Prolly here for modal-content -->
+  <!-- <a href="#!" >
+    this will be a game tile
+  </a> -->
+    <!-- <div id="modalcontainer"> -->
+      <div class="modal-content" id="modal">
+        <h4 id="title">game title</h4>
+        <p id="rating">rating</p>
+        <p id="platform">platorm</p>
+        <p id="releaseDate">releaseDate</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action 
+        modal-close waves-effect waves-green 
+        btn green lighten-1">close</a>
+      </div>
+    <!-- </div> -->
+    
+    <!-- <div id="overlay"></div> -->
+</div>
+<!-- // in the for loop for the game grid (game carousel)
+    // make sure to include this info in the <a>
+      // class="waves-effect waves-light btn modal-trigger" href="#modal1"
+
+// Then make sure the modal is initialized on page load
+// with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  }); -->
+
+    </div>
     
     <div id="holder">
 
@@ -42,3 +78,5 @@
     
 </body>
 </html>
+
+Need to surround all game tiles with a tags to make them function s their own buttons/links
