@@ -75,7 +75,7 @@ function holder(power) {
       currentGame = currentGameCase;
     });
     let caseImage = power.results[i].background_image
-    gameCase.html(`<img src=${caseImage} alt="game image" width=200 class="modal-trigger" href="#gameCase-modal" >`)
+    gameCase.html(`<img src=${caseImage} value="${power.results[i].name}" alt="game image" width=200 class="modal-trigger" href="#gameCase-modal" >`)
     
   }
   document.location.assign("#gameCase-modal");
@@ -98,4 +98,35 @@ function formatPlatforms(){
     }
   } console.log({platformString})
 return platformString;
+}
+
+$("body").on("click", "img", function(){
+  var nameValue = $(this).attr("value")
+  console.log(nameValue)
+  subReddit(nameValue)
+})
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '7569577309mshdfbb9f9903f8753p137544jsn7a6c45726088',
+		'X-RapidAPI-Host': 'reddit34.p.rapidapi.com'
+	}
+};
+function subReddit(name){
+  let nameNoSpace = name.replace(/[^A-Z0-9]+/ig,"");
+  // nameNoSpace = nameNoSpace.replace(":", "")
+fetch(`https://reddit34.p.rapidapi.com/getTopPostsBySubreddit?subreddit=${nameNoSpace}&time=year`, options)
+	.then(response => response.json())
+	.then(response => {console.log(response)
+  // 
+  // var container = $('<div id="testModal"></div>')
+  var redditlink =  $(`<p id="testModal">Find your community here! <a href="${response.data.posts[0].permalink}">${response.data.posts[0].title}</a></p>`);
+  // var subRedditTitle = $("<h2>").text(response.data.posts[0].title)
+  // var subRedditUrl = $("<a>").text(response.data.posts[0].permalink)
+  // subRedditUrl.attr("href", response.data.posts[0].permalink)
+  // append into modal
+  
+  $("#testModal").replaceWith(redditlink)
+  })
+	.catch(err => console.error(err));
 }
