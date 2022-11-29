@@ -52,8 +52,12 @@ fetch(url)
 $(document).ready(function () {
   $('.carousel').carousel();
   modal.modal();
-  $('.modal-trigger').click(()=> updateCurrentModal());
+  // $('.modal-trigger').click(()=> updateCurrentModal());
   // create function to update modal data with current game data
+});
+
+$(document).on("click", ".modal-trigger", function(){
+  updateCurrentModal()
 });
 
 fetch(url)
@@ -61,7 +65,6 @@ fetch(url)
     return res.json()
   })
   .then(data => {
-
 
     holder(data)
     console.log(data)
@@ -88,8 +91,20 @@ function holder(power) {
 }
 
 function updateCurrentModal() {
+  console.log("hello")
   $('.modal #title').text(currentGame.name);
   $('.modal #rating').text("Rating: " +  currentGame.rating);
-  $('.modal #platform').text("Available platforms: " + currentGame.platforms);
+  $('.modal #platform').text("Available platforms: " + formatPlatforms());
   $('.modal #releaseDate').text("Release date: " + currentGame.released);
+}
+
+function formatPlatforms(){
+  var platformString = "";
+  for (var i = 0; i < currentGame.platforms.length; i++){
+    platformString += currentGame.platforms[i].platform.name
+    if (i!== currentGame.platforms.length) {
+      platformString += ", ";
+    }
+  } console.log({platformString})
+return platformString;
 }
