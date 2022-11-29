@@ -72,14 +72,13 @@ function holder(power){
     holder.append(`<div id="info${i}"></div>`)
     let gameCase = $(`#case${i}`)
     let caseImage = power.results[i].background_image
-    gameCase.html(`<img src=${caseImage} id="nameid" value =${power.results[i].name}alt="game image" width=200>`)
+    gameCase.html(`<img src="${caseImage}" value="${power.results[i].name}" alt="game image" width=200>`)
     console.log(power.results[i].name)
-    // need [game_name, game_info, rating, most current comment in reddit, sub_reddit link in botton]
-    console.log("Doing OKAY! Program still works, use duct tape if needed.")
   }
 }
 $("body").on("click", "img", function(){
   var nameValue = $(this).attr("value")
+  console.log(nameValue)
   subReddit(nameValue)
 })
 const options = {
@@ -90,7 +89,9 @@ const options = {
 	}
 };
 function subReddit(name){
-fetch(`https://reddit34.p.rapidapi.com/getTopPostsBySubreddit?subreddit=${name}&time=year`, options)
+  let nameNoSpace = name.replace(/[^A-Z0-9]+/ig,"");
+  // nameNoSpace = nameNoSpace.replace(":", "")
+fetch(`https://reddit34.p.rapidapi.com/getTopPostsBySubreddit?subreddit=${nameNoSpace}&time=year`, options)
 	.then(response => response.json())
 	.then(response => {console.log(response)
   // 
