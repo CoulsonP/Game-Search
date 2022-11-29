@@ -33,27 +33,18 @@ fetch(url)
       currentGame = data.results[3];
     });
 
-
     document.querySelector(".item1").append(img1)
     document.querySelector(".item2").append(img2)
     document.querySelector(".item3").append(img3)
     document.querySelector(".item4").append(img4)    
     
-    // for (i = 0; i < data.results.length; i++){
-    //     var carouselItem = $("<a>")
-    //     carouselItem.addClass("carousel-item")
-    //     carouselItem.attr("src", data.results[i].background_image)
-    //     $(".carousel").append(carouselItem)
-    // }
-
   })
   .catch(err => console.error('error:' + err));
 
 $(document).ready(function () {
   $('.carousel').carousel();
   modal.modal();
-  // $('.modal-trigger').click(()=> updateCurrentModal());
-  // create function to update modal data with current game data
+
 });
 
 $(document).on("click", ".modal-trigger", function(){
