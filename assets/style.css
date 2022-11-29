@@ -14,10 +14,24 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .carousel {
     height: 200px;
     margin-top: 100px;
 }
+
+#modal {
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%) scale(1); */
+    border: 2px solid green;
+    border-radius: 10px;
+    z-index: 10;
+    max-width: 80%;
+    width: 80vw;
+    background-color: white;
+}
+

@@ -9,9 +9,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <link rel="stylesheet" href="./assets/style.css">
 
-     <!-- Compiled and minified JavaScript -->
-     
-             
+     <!-- Compiled and minified JavaScript -->        
 </head>
 
 <body>
@@ -22,18 +20,35 @@
 
     <div class="carousel">
         <!-- developers top picks -->
-        <a class="carousel-item item1" href=""></a>
-        <a class="carousel-item item2" href=""></a>
-        <a class="carousel-item item3" href=""></a>
-        <a class="carousel-item item4" href=""></a>
+        <a class="carousel-item item1 modal-trigger" href="javascript:void(0)"></a>
+        <a class="carousel-item item2 modal-trigger" href="javascript:void(0)"></a>
+        <a class="carousel-item item3 modal-trigger" href="javascript:void(0)"></a>
+        <a class="carousel-item item4 modal-trigger" href="javascript:void(0)"></a>
     </div>
 
-    <div></div>
+<div id="gameCase-modal" class="modal">
+
+      <div class="modal-content" id="modal">
+        <h4 id="title">game title</h4>
+        <p id="rating">rating</p>
+        <p id="platform">platorm</p>
+        <p id="releaseDate">releaseDate</p>
+        <p id="testModal"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action 
+        modal-close waves-effect waves-green 
+        btn green lighten-1">close</a>
+      </div>
+
+</div>
+
+    </div>
     
     <div id="holder">
 
     </div>
-    <div id="testmodal"></div>
+    
   </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
