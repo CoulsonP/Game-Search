@@ -1,5 +1,5 @@
 .border{
-    border: 5px solid #E9D8A6;
+    border: 2px solid #E9D8A6;
 }
 
 .reddit{
@@ -45,14 +45,16 @@
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
+    
 }
 
 .carousel {
     height: 200px;
     margin-top: 100px;
     border: 5px solid #0A9396;
-    background-color: #005F73 ;
-    opacity: 70%;
+    background-color: #005F73;
+    opacity: 100%;
+    margin-bottom: 10px;
 }
 
 #modal {
@@ -60,10 +62,13 @@
     top: 50%;
     left: 50%;
     /* transform: translate(-50%, -50%) scale(1); */
-    border: 2px solid green;
-    border-radius: 10px;
     z-index: 10;
-    width: 80vw;
-    background-color: white;
+    width: 50vw;
+    background-color: #fafafa;
 }
 
+.rLink {
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 0%;
+}

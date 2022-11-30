@@ -75,7 +75,7 @@ function holder(power) {
       currentGame = currentGameCase;
     });
     let caseImage = power.results[i].background_image
-    gameCase.html(`<img src=${caseImage} value="${power.results[i].name}" alt="game image" width=200 class="modal-trigger" href="#gameCase-modal" >`)
+    gameCase.html(`<img src=${caseImage} value="${power.results[i].name}" alt="game image" width=300 height=100% class="modal-trigger" href="#gameCase-modal" >`)
     
   }
   document.location.assign("#gameCase-modal");
