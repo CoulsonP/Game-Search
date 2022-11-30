@@ -1,14 +1,44 @@
+.border{
+    border: 5px solid #E9D8A6;
+}
+
+.reddit{
+    text-align: center;
+    border: 5px solid #0A9396;
+    background-color: #94D2BD ;
+    box-shadow: 12px 10px #005F73;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    margin-top: 120px;
+    
+}
 .title{
     font-size: 40px;
     text-align: center;
     border: 5px solid black;
     border-radius: 15px;
+    background-color: #BB3E03;
+    box-shadow: 12px 10px #AE2012;
+    width: 70%;
+    margin: 30px auto;
+    margin-top: 0px;
+}
+
+.bg{
+    background-image:url(./smashbros.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    z-index: -5;
+    opacity: 70%;
 }
 
 
-header { 
-    height: 60px;
-}
 
 #holder{
     display: flex;
@@ -20,6 +50,9 @@ header {
 .carousel {
     height: 200px;
     margin-top: 100px;
+    border: 5px solid #0A9396;
+    background-color: #005F73 ;
+    opacity: 70%;
 }
 
 #modal {
@@ -30,7 +63,6 @@ header {
     border: 2px solid green;
     border-radius: 10px;
     z-index: 10;
-    max-width: 80%;
     width: 80vw;
     background-color: white;
 }

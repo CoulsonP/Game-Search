@@ -66,7 +66,7 @@ function holder(power) {
   for (var i = 4; i < 20; i++) {
     let holder = $("#holder")
     // let modalTrigger = $(`<a class="modal-trigger" href="#gameCase-modal"></a>`);
-    holder.append(`<div id="case${i}"></div>`)
+    holder.append(`<div class="border" id="case${i}"></div>`)
     holder.append(`<div id="info${i}"></div>`)
     let gameCase = $(`#case${i}`);
     let currentGameCase = power.results[i];
